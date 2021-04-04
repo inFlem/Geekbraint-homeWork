@@ -4,14 +4,12 @@ import java.util.Scanner;
 import static lesson1.lesson1.*;
 import static lesson2.lesson2.*;
 import static lesson3.lesson3.userRandom;
+import static lesson4.lesson4.*;
 
 
 public class Main {
 
-    public static final int QUANTITY_ATTEMPT = 3;
-
     public static Scanner keyboard = new Scanner(System.in);
-    public static Random random = new Random();
 
 
     public static void main(String[] args) {
@@ -32,7 +30,33 @@ public class Main {
             fillDiagonal();
         //lesson3
             userRandom();
+            //keyboard.close();
+        //lesson4
+            initMap();
+            printMap();
+                while (true) {
+                    humanTurn();
+                    printMap();
+                    if (checkWin(DOT_X)) {
+                        System.out.println("Победил человек");
+                        break;
+                    }
+                    if (isMapFull()) {
+                        System.out.println("Ничья");
+                        break;
+                    }
+                    aiTurn();
+                    printMap();
+                    if (checkWin(DOT_O)) {
+                        System.out.println("Победил Компьютер");
+                        break;
+                    }
+                    if (isMapFull()) {
+                        System.out.println("Ничья");
+                        break;
+                    }
+                }
+                System.out.println("Игра окончена");
             keyboard.close();
-        }
-
+    }
 }
