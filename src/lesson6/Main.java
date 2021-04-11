@@ -1,3 +1,5 @@
+package lesson6;
+
 import java.util.Scanner;
 
 import static lesson1.lesson1.*;
@@ -12,6 +14,7 @@ public class Main {
     public static Scanner keyboard = new Scanner(System.in);
 
     public static void main(String[] args) {
+
         //lesson1
             calculate(1.0f, 2.2f, 3.3f ,4.4f);
             task10and20(11, 12, 13, 20);
@@ -29,7 +32,6 @@ public class Main {
             fillDiagonal();
         //lesson3
             userRandom();
-            //keyboard.close();
         //lesson4
             initMap();
             printMap();
@@ -56,7 +58,6 @@ public class Main {
                     }
                 }
                 System.out.println("Игра окончена");
-            keyboard.close();
         //lesson5
             employee[] personArr  = new employee[5];
             personArr[0] = new employee("Ivanov Ivan", "Engineer", "ivivan@mail.com", "892312311", 30000, 30);
@@ -70,5 +71,25 @@ public class Main {
                     personArr[i].print();
                 }
             }
+         //lesson6
+            System.out.println("Введите кол-во метров для пробежки");
+            int doRun = keyboard.nextInt();
+
+            System.out.println("Введите кол-во метров для плавания");
+            int doSwim = keyboard.nextInt();
+
+            Cat cat = new Cat();
+            cat.name = "барсик";
+            cat.run(doRun);
+            cat.swim(doSwim);
+
+            Dog dog = new Dog();
+            dog.name = "песик";
+            dog.run(doRun);
+            dog.swim(doSwim);
+
+         //keyboard Close
+            keyboard.close();
     }
+
 }
