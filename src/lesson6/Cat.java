@@ -11,7 +11,6 @@ public class Cat extends Animals{
         if ((run >= 0) && (run <= MAX_RUN))
             System.out.println(name + " пробежал " + run + " м");
         else System.out.println("Не смог пробежать");
-
     }
 
     @Override

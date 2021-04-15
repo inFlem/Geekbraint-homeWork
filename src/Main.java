@@ -1,5 +1,3 @@
-package lesson6;
-
 import java.util.Scanner;
 
 import static lesson1.lesson1.*;
@@ -7,6 +5,8 @@ import static lesson2.lesson2.*;
 import static lesson3.lesson3.userRandom;
 import static lesson4.lesson4.*;
 import lesson5.employee;
+import lesson6.Cat;
+import lesson6.Dog;
 
 
 public class Main {

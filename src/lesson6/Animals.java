@@ -2,7 +2,7 @@ package lesson6;
 
 public abstract class Animals {
 
-    protected String name;
+    public String name;
     protected int MAX_RUN;
     protected int MAX_SWIM;
 

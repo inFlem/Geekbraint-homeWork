@@ -4,7 +4,6 @@ public class Dog extends Animals {
 
     public Dog() {
         super(500, 10);
-
     }
 
     @Override
